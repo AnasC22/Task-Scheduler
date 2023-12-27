@@ -11,8 +11,24 @@
     <!-- Toggle between task list and calendar  -->
 
     <div class="task-manager">
-        <!-- Add tasks-->
-        <input type="text">
+        <div id="add-task">
+            <label for="taskName">Task:</label>
+            <input type="text" placeholder="Name of Task" name="taskName" id="taskName">
+
+            <label for="date">Due Date:</label>
+            <input type="date" name="date" id="date">
+
+            <input type="submit" id="submit" onclick="addTask()">
+        </div>
+
+        <!-- Show tasks-->
+        <div id="show-tasks">
+            <ul id="task-list">
+
+            </ul>
+
+        </div>
+        
     </div>
 
     <div class="calendar">
