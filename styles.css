@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* background-image: linear-gradient(25deg, #6e3092, #6758a4, #567bb6, #2d9cc8) */
 }
@@ -57,11 +56,24 @@ button {
     margin-left: 10px;
 }
 
+.unchecked {
+    text-decoration: none;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
 img {
     width: 15px;
     height: auto;
+    cursor: pointer;
 }
 
 .task-name {
     margin: 10px;
+}
+
+span {
+    cursor: pointer;
 }

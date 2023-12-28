@@ -11,7 +11,7 @@ function addTask() {
     list.innerHTML += 
     `
     <div class="task-item">
-        <img src="images/unchecked.png" class="unchecked-circle">
+        <img src="images/unchecked.png">
 
         <div class="task-name">
             <h4>${task}</h4>
@@ -32,15 +32,26 @@ function addTask() {
     */
 }
 
-function deleteTask(e) {
+function deleteTask(e) {       
     if(e.target.tagName === "SPAN")
     {
         e.target.parentElement.remove();
     }
-    else if((e.target.tagName === "IMG") || (e.target.tagName === "DIV"))
+    else if((e.target.tagName === "IMG") || (e.target.tagName === "DIV") || (e.target.tagName === "H4"))
     {
-        e.target.src = "images/checked-circle.svg";
+        if(e.target.tagName === "IMG")
+        {
+            if(e.target.src.includes("images/unchecked.png"))
+            {
+                e.target.src = "images/checked-circle.svg";
+            }
+            else
+            {
+                e.target.src = "images/unchecked.png";
+            }
+            
+            e.target.nextElementSibling.classList.toggle("checked");
+            e.target.nextElementSibling.nextElementSibling.classList.toggle("checked")
+        }
     }
-    console.log(e.target.tagName);
-    //else if(e.target.ta)
 }
