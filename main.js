@@ -32,7 +32,7 @@ function addTask() {
     */
 }
 
-function deleteTask(e) {       
+function deleteTask(e) {
     if(e.target.tagName === "SPAN")
     {
         e.target.parentElement.remove();
@@ -53,7 +53,8 @@ function deleteTask(e) {
             e.target.nextElementSibling.classList.toggle("checked");
             e.target.nextElementSibling.nextElementSibling.classList.toggle("checked")
         }
-        else if(e.target.parentElement.nextElementSibling.tagName === "DIV")
+
+        else if(e.target.parentElement.classList.contains("task-name"))
         {
             if(e.target.parentElement.previousElementSibling.src.includes("images/unchecked.png"))
             {
@@ -67,7 +68,8 @@ function deleteTask(e) {
             e.target.parentElement.classList.toggle("checked");
             e.target.parentElement.nextElementSibling.classList.toggle("checked");
         }
-        else
+
+        else if (e.target.parentElement.classList.contains("due-date"))
         {
             if(e.target.parentElement.previousElementSibling.previousElementSibling.src.includes("images/unchecked.png"))
             {
@@ -80,6 +82,20 @@ function deleteTask(e) {
 
             e.target.parentElement.classList.toggle("checked");
             e.target.parentElement.previousElementSibling.classList.toggle("checked");
+        }
+        else
+        {
+            if(e.target.children[0].src.includes("images/unchecked.png"))
+            {
+                e.target.children[0].src = "images/checked-circle.svg";
+            }
+            else
+            {
+                e.target.children[0].src = "images/unchecked.png";
+            }
+
+            e.target.children[1].classList.toggle("checked");
+            e.target.children[2].classList.toggle("checked");
         }
     }
 
