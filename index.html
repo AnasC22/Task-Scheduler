@@ -12,13 +12,19 @@
 
     <div class="task-manager">
         <div id="add-task">
-            <label for="taskName">Task:</label>
-            <input type="text" placeholder="Name of Task" name="taskName" id="taskName">
+            <div class="name-input">
+                <input type="text" placeholder="Name of Task" name="taskName" id="taskName">
+                <label for="taskName">Task:</label>
+            </div>
+            
+            <div class="date-input">
+                <input type="date" name="date" id="date">
+                <label for="date">Due Date:</label>
+            </div>
+            
 
-            <label for="date">Due Date:</label>
-            <input type="date" name="date" id="date">
-
-            <input type="submit" id="submit" onclick="addTask()">
+            <button onclick="addTask()">+</button>
+            <!-- <input type="submit" id="submit" onclick="addTask()"> -->
         </div>
 
         <!-- Show tasks-->

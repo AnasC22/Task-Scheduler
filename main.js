@@ -7,15 +7,17 @@ function addTask() {
     list.innerHTML += 
     `
     <div class="task-item">
-        <div class="unchecked-circle">
-            <img src="images/unchecked.png">
-        </div>        
+        <img src="images/unchecked.png" class="unchecked-circle">
+
         <div class="task-name">
             <h4>${task}</h4>
         </div>
+
         <div class = "due-date">
             <h4>${date}</h4>
         </div>
+
+        <span>x</span>
     </div>
     `;
 
