@@ -1,4 +1,8 @@
 let list = document.getElementById("task-list");
+// document.querySelectorAll("span").addEventListener('click', deleteTask(e));
+document.getElementById("task-list").addEventListener("click", function(e) {
+    deleteTask(e);
+});
 
 function addTask() {
     let task = document.getElementById("taskName").value;
@@ -26,4 +30,17 @@ function addTask() {
     document.getElementById("taskName").value = "";
     document.getElementById("date").value = "";
     */
+}
+
+function deleteTask(e) {
+    if(e.target.tagName === "SPAN")
+    {
+        e.target.parentElement.remove();
+    }
+    else if((e.target.tagName === "IMG") || (e.target.tagName === "DIV"))
+    {
+        e.target.src = "images/checked-circle.svg";
+    }
+    console.log(e.target.tagName);
+    //else if(e.target.ta)
 }
