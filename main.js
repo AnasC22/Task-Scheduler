@@ -53,5 +53,34 @@ function deleteTask(e) {
             e.target.nextElementSibling.classList.toggle("checked");
             e.target.nextElementSibling.nextElementSibling.classList.toggle("checked")
         }
+        else if(e.target.parentElement.nextElementSibling.tagName === "DIV")
+        {
+            if(e.target.parentElement.previousElementSibling.src.includes("images/unchecked.png"))
+            {
+                e.target.parentElement.previousElementSibling.src = "images/checked-circle.svg";
+            }
+            else
+            {
+                e.target.parentElement.previousElementSibling.src = "images/unchecked.png";
+            }
+
+            e.target.parentElement.classList.toggle("checked");
+            e.target.parentElement.nextElementSibling.classList.toggle("checked");
+        }
+        else
+        {
+            if(e.target.parentElement.previousElementSibling.previousElementSibling.src.includes("images/unchecked.png"))
+            {
+                e.target.parentElement.previousElementSibling.previousElementSibling.src = "images/checked-circle.svg";
+            }
+            else
+            {
+                e.target.parentElement.previousElementSibling.previousElementSibling.src = "images/unchecked.png";
+            }
+
+            e.target.parentElement.classList.toggle("checked");
+            e.target.parentElement.previousElementSibling.classList.toggle("checked");
+        }
     }
+
 }
