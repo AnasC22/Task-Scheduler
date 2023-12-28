@@ -7,7 +7,8 @@
 }
 
 body {
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    background-color: #7cc1ac;
 }
 
 h1 {
@@ -33,7 +34,7 @@ input {
 }
 
 ::placeholder {
-    color: azure;
+    color: black;
 }
 
 .name-input {
@@ -45,15 +46,41 @@ input {
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
     border: none;
+    background-color: #f38287;
+    color: azure;
+}
+
+button:hover {
+    background-color: #be686c;
 }
 
 
 /* List of tasks */
+#task-list {
+    margin: 0 auto;
+}
+
 .task-item {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    width: 40%;
+    margin: 2px auto;
+    cursor: pointer;
+    justify-content: flex-start;
+    position: relative;
+    border-radius: 10px;
+    background-color: #C38D9E;
+}
+
+.task-item:hover {
+    background-color: #75545f;
 }
 
 .unchecked {
@@ -67,13 +94,33 @@ button {
 img {
     width: 15px;
     height: auto;
-    cursor: pointer;
+    padding: 10px;
 }
 
 .task-name {
     margin: 10px;
+    color: azure;
+}
+
+.due-date {
+    margin: 10px;
+    color: azure;
 }
 
 span {
-    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: azure;
+    font-size: 14px;
+}
+
+span:hover {
+    background-color: #75545f;
+
 }
