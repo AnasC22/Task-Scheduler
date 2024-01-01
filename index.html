@@ -8,38 +8,30 @@
 </head>
 <body>
     <h1>Task Scheduler</h1>
-    <!-- Toggle between task list and calendar  -->
-
     <div class="task-manager">
+        <!-- Interface to add tasks -->
         <div id="add-task">
+            <!-- Input to enter the name of the task -->
             <div class="name-input">
                 <input type="text" placeholder="Name of Task" name="taskName" id="taskName">
                 <label for="taskName">Task:</label>
             </div>
             
+            <!-- Input to enter the due date of the task -->
             <div class="date-input">
                 <input type="date" name="date" id="date">
                 <label for="date">Due Date:</label>
             </div>
             
-
+            <!-- Button to add task to the running list -->
             <button onclick="addTask()">+</button>
-            <!-- <input type="submit" id="submit" onclick="addTask()"> -->
         </div>
 
-        <!-- Show tasks-->
+        <!-- Display the running list of tasks -->
         <div id="task-list">
-
+            <!-- Lists are dynamically added to this div -->
         </div>
-        
     </div>
-
-    <div class="calendar">
-
-    </div>
-    
-
-
     <script src="main.js"></script>
 </body>
 </html>
